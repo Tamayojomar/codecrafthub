@@ -1,6 +1,6 @@
-package com.codecrafthub.service;
+package com.codecrafthub.codecrafthub.service;
 
-import com.codecrafthub.model.Course;
+import com.codecrafthub.codecrafthub.model.Course;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;

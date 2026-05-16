@@ -1,4 +1,4 @@
-package com.codecrafthub.model;
+package com.codecrafthub.codecrafthub.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

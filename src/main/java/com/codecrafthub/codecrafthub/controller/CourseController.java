@@ -1,7 +1,7 @@
-package com.codecrafthub.controller;
+package com.codecrafthub.codecrafthub.controller;
 
-import com.codecrafthub.model.Course;
-import com.codecrafthub.service.CourseService;
+import com.codecrafthub.codecrafthub.model.Course;
+import com.codecrafthub.codecrafthub.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
