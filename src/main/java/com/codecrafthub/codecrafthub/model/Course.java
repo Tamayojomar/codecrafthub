@@ -1,24 +1,17 @@
 package com.codecrafthub.codecrafthub.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class Course {
     private Integer id;
     private String name;
     private String description;
-
-    @JsonProperty("target_date")
     private String targetDate;
-
     private String status;
-
-    @JsonProperty("created_at")
     private String createdAt;
 
-    // Constructors
     public Course() {}
 
-    public Course(Integer id, String name, String description, String targetDate, String status, String createdAt) {
+    public Course(Integer id, String name, String description,
+                  String targetDate, String status, String createdAt) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -27,7 +20,6 @@ public class Course {
         this.createdAt = createdAt;
     }
 
-    // Getters and Setters
     public Integer getId() { return id; }
     public void setId(Integer id) { this.id = id; }
 
