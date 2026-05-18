@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CodeCraftHub - Course Management</title>
+      <title>CodeCraftHub - Your Learning Management Platform</title>
     <style>
       * {
         margin: 0;
@@ -113,7 +113,7 @@
       }
 
       .btn-primary {
-        background: #3b82f6;
+        background: #8B5CF6;
         color: white;
       }
 
@@ -130,18 +130,18 @@
       }
 
       .btn-success {
-        background: #10b981;
-        color: white;
-        padding: 0.5rem 1rem;
-        font-size: 0.875rem;
+          background: #F59E0B;
+          color: white;
+          padding: 0.5rem 1rem;
+          font-size: 0.875rem;
       }
 
       .btn-success:hover {
-        background: #059669;
+          background: #059669;
       }
 
       .btn-danger {
-        background: #ef4444;
+        background: #EF4444;
         color: white;
         padding: 0.5rem 1rem;
         font-size: 0.875rem;
@@ -541,9 +541,7 @@
                         <button class="btn-success" onclick="startEdit(${
                           course.id
                         })">Edit</button>
-                        <button class="btn-danger" onclick="handleDelete('${
-                          course.id
-                        }')">Delete</button>
+                        <button class="btn-danger" onclick="handleDelete('${course.id}')">Remove</button>
                     </div>
                 </div>
             `;
@@ -616,21 +614,19 @@
       }
 
       async function handleDelete(courseId) {
-        if (!confirm("Are you sure you want to delete this course?")) {
-          return;
-        }
+          if (!confirm("Are you sure you want to remove this course?")) return;
 
-        try {
-          const response = await fetch(`${API_BASE_URL}/${courseId}`, {
-            method: "DELETE",
-          });
+          try {
+              const response = await fetch(`${API_BASE_URL}/${courseId}`, {
+                  method: "DELETE"
+              });
 
-          if (!response.ok) throw new Error("Failed to delete course");
+              if (!response.ok) throw new Error("Failed to remove course");
 
-          await fetchCourses();
-        } catch (error) {
-          alert(`Error deleting course: ${error.message}`);
-        }
+              await fetchCourses(); // Refresh the course list after deletion
+          } catch (error) {
+              alert(`Error deleting course: ${error.message}`);
+          }
       }
 
       fetchCourses();

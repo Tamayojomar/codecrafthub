@@ -5,11 +5,4 @@
   "targetDate" : "2026-05-20",
   "status" : "Not Started",
   "createdAt" : "2026-05-19 03:30:47"
-}, {
-  "id" : 2,
-  "name" : "python",
-  "description" : "Snake",
-  "targetDate" : "2026-05-22",
-  "status" : "Completed",
-  "createdAt" : "2026-05-19 03:38:09"
 } ]
